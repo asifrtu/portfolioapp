@@ -1,14 +1,32 @@
+'use client'
+
 import { Menu, X, Moon, Sun, Search } from 'lucide-react'
+import { useState, useEffect } from 'react'
 
-interface HeaderProps {
-  darkMode: boolean
-  toggleDarkMode: () => void
-  menuOpen: boolean
-  setMenuOpen: (open: boolean) => void
-}
-
-export default function Header({ darkMode, toggleDarkMode, menuOpen, setMenuOpen }: HeaderProps) {
+export default function Header() {
+  const [darkMode, setDarkMode] = useState(false)
+  const [mounted, setMounted] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
   const navItems = ['Components', 'Blocks', 'Blog', 'Sponsors']
+
+  useEffect(() => {
+    setMounted(true)
+    const isDark = localStorage.getItem('darkMode') === 'true' ||
+      (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    setDarkMode(isDark)
+  }, [])
+
+  const toggleDarkMode = () => {
+    const newDarkMode = !darkMode
+    setDarkMode(newDarkMode)
+    localStorage.setItem('darkMode', String(newDarkMode))
+    
+    if (newDarkMode) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
@@ -42,13 +60,16 @@ export default function Header({ darkMode, toggleDarkMode, menuOpen, setMenuOpen
             <span className="text-xs text-foreground/40 ml-2">⌘K</span>
           </button>
 
-          <button
-            onClick={toggleDarkMode}
-            className="p-2 rounded-lg hover:bg-muted transition-colors"
-            aria-label="Toggle theme"
-          >
-            {darkMode ? <Sun size={18} /> : <Moon size={18} />}
-          </button>
+          {mounted && (
+            <button
+              onClick={toggleDarkMode}
+              className="p-2 rounded-lg hover:bg-muted transition-colors"
+              aria-label="Toggle theme"
+              type="button"
+            >
+              {darkMode ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
+          )}
 
           <button
             onClick={() => setMenuOpen(!menuOpen)}
