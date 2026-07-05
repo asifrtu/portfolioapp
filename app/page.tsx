@@ -14,12 +14,7 @@ export default function Home() {
       <Header />
       <main className="pt-16">
         <Hero />
-        <About />
-        <Components />
-        <Experience />
-        <Blog />
       </main>
-      <Footer />
     </div>
   )
 }

@@ -25,12 +25,12 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">CD</span>
+                <span className="text-primary-foreground font-bold text-sm">MAR</span>
               </div>
-              <span className="font-semibold">Chánh Đại</span>
+              <span className="font-semibold">MD ASIF RAZA</span>
             </div>
             <p className="text-sm text-foreground/60">
-              Design engineer crafting beautiful, accessible digital experiences.
+              Full-Stack Software Engineer.
             </p>
           </div>
 
@@ -62,7 +62,7 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-foreground/60">
           <div>
-            © {currentYear} Chánh Đại. All rights reserved.
+            © {currentYear} MD ASIF RAZA. All rights reserved.
           </div>
           <div className="flex items-center space-x-6">
             <a href="#" className="hover:text-foreground transition-colors">

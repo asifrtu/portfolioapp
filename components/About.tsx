@@ -1,72 +1,386 @@
+"use client";
+
+import Link from "next/link";
+import {
+  ArrowRight,
+  BriefcaseBusiness,
+  Code2,
+  Database,
+  User,
+  Globe,
+  Layers3,
+  Server,
+  ShieldCheck,
+  Sparkles,
+} from "lucide-react";
+
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+
+const frontend = [
+  "React",
+  "Next.js",
+  "TypeScript",
+  "JavaScript",
+  "HTML5",
+  "CSS3",
+  "Tailwind CSS",
+  "Redux Toolkit",
+  "React Hook Form",
+  "Zod",
+];
+
+const backend = [
+  "Node.js",
+  "Express.js",
+  "Laravel",
+  "PHP",
+  "REST APIs",
+  "Prisma ORM",
+];
+
+const database = [
+  "PostgreSQL",
+  "MySQL",
+  "MongoDB",
+  "Redis",
+];
+
+const tools = [
+  "Git",
+  "UserIcon",
+  "Docker",
+  "Vercel",
+  "Postman",
+  "Figma",
+  "Linux",
+];
+
+const services = [
+  {
+    icon: Globe,
+    title: "Full-Stack Development",
+  },
+  {
+    icon: Code2,
+    title: "React & Next.js",
+  },
+  {
+    icon: Server,
+    title: "Node.js APIs",
+  },
+  {
+    icon: Database,
+    title: "Database Design",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Authentication & Security",
+  },
+  {
+    icon: Layers3,
+    title: "Scalable Architecture",
+  },
+];
+
 export default function About() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
-          {/* Left Navigation */}
-          <div className="space-y-6">
-            <div className="space-y-4">
-              <div className="h-px w-8 bg-primary"></div>
-              <h2 className="text-sm font-semibold uppercase tracking-wider text-foreground/60">
-                About
-              </h2>
-            </div>
-            <div className="space-y-4">
-              <div className="h-px w-8 bg-primary/50"></div>
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground/60">
-                Experience
-              </h3>
-            </div>
-            <div className="space-y-4">
-              <div className="h-px w-8 bg-primary/50"></div>
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground/60">
-                Projects
-              </h3>
-            </div>
-          </div>
+    <section className="container py-20">
+      <div className="mx-auto max-w-7xl">
 
-          {/* Content */}
-          <div className="lg:col-span-2 space-y-8">
-            <p className="text-lg text-foreground/80 leading-relaxed">
-              I&apos;m a design engineer passionate about crafting accessible, pixel-perfect user interfaces that blend thoughtful design with robust engineering. My favorite work lies at the intersection of design and development, creating experiences that not only look great but are meticulously built for performance and usability.
-            </p>
+        {/* Heading */}
 
-            <p className="text-lg text-foreground/80 leading-relaxed">
-              Currently, I&apos;m a Senior Design Engineer at Vercel, specializing in design systems and component architecture. I contribute to the creation and maintenance of UI components that power Vercel&apos;s frontend, ensuring our platform meets web accessibility standards and best practices to deliver an inclusive user experience.
-            </p>
+        <div className="space-y-5 text-center">
+          <Badge
+            variant="secondary"
+            className="rounded-full px-4 py-1 text-sm"
+          >
+            👋 Welcome
+          </Badge>
 
-            <p className="text-lg text-foreground/80 leading-relaxed">
-              In the past, I&apos;ve had the opportunity to develop software across a variety of settings — from advertising agencies and large corporations to startups and small digital product studios. Additionally, I released a comprehensive video course a few years ago, guiding learners through building a web app with the Spotify API.
-            </p>
+          <h1 className="text-4xl font-extrabold tracking-tight md:text-6xl">
+            Hi, I'm{" "}
+            <span className="bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent">
+              ASIF RAZA
+            </span>
+          </h1>
 
-            <p className="text-lg text-foreground/80 leading-relaxed">
-              In my spare time, I enjoy climbing, reading, spending time with my wife and dogs, or searching for rare plants in hidden gardens.
-            </p>
+          <h2 className="text-2xl font-semibold text-muted-foreground">
+            Full-Stack Software Engineer
+          </h2>
 
-            {/* Skills/Tags */}
-            <div className="pt-8 flex flex-wrap gap-2">
-              <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                React
-              </span>
-              <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                Next.js
-              </span>
-              <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                TypeScript
-              </span>
-              <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                Tailwind CSS
-              </span>
-              <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                Figma
-              </span>
-              <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                Design Systems
-              </span>
-            </div>
+          <p className="mx-auto max-w-3xl text-lg leading-8 text-muted-foreground">
+            Building scalable, high-performance web applications with modern
+            technologies and exceptional user experiences.
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-4 pt-3">
+            <Button size="lg">
+              Hire Me
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+
+            <Button
+              variant="outline"
+              size="lg"
+            >
+              <Link href="#">
+                <User className="mr-2 h-4 w-4" />
+                User
+              </Link>
+            </Button>
           </div>
         </div>
+
+        <Separator className="my-16" />
+
+        {/* About */}
+
+        <Card className="border-0 shadow-lg">
+          <CardContent className="space-y-6 p-8">
+
+            <div className="flex items-center gap-3">
+              <Sparkles className="h-6 w-6 text-primary" />
+              <h3 className="text-2xl font-bold">
+                About Me
+              </h3>
+            </div>
+
+            <p className="leading-8 text-muted-foreground">
+              With over <strong>5 years of experience</strong>, I specialize in
+              developing scalable frontend and backend applications using
+              <strong>
+                {" "}
+                React, Next.js, Node.js, Express.js, Laravel, TypeScript,
+                PostgreSQL, MySQL, and MongoDB.
+              </strong>{" "}
+              I enjoy transforming complex business requirements into elegant,
+              secure, and maintainable software.
+            </p>
+
+            <p className="leading-8 text-muted-foreground">
+              Whether it's building responsive user interfaces, architecting
+              scalable APIs, optimizing performance, or designing clean system
+              architecture, my goal is always to create software that is fast,
+              accessible, secure, and built to last.
+            </p>
+
+          </CardContent>
+        </Card>
+
+        <Separator className="my-16" />
+
+        {/* Services */}
+
+        <div>
+
+          <div className="mb-10 text-center">
+            <h3 className="text-3xl font-bold">
+              What I Do
+            </h3>
+
+            <p className="mt-3 text-muted-foreground">
+              End-to-end software development for startups, businesses, and
+              enterprise applications.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+            {services.map((service) => (
+              <Card
+                key={service.title}
+                className="group transition-all hover:-translate-y-2 hover:shadow-xl"
+              >
+                <CardContent className="flex items-center gap-4 p-6">
+
+                  <div className="rounded-xl bg-primary/10 p-3">
+                    <service.icon className="h-6 w-6 text-primary" />
+                  </div>
+
+                  <h4 className="font-semibold">
+                    {service.title}
+                  </h4>
+
+                </CardContent>
+              </Card>
+            ))}
+
+          </div>
+        </div>
+
+        <Separator className="my-16" />
+
+        {/* Technologies */}
+
+        <div className="space-y-10">
+
+          <div className="text-center">
+            <h3 className="text-3xl font-bold">
+              Technologies
+            </h3>
+
+            <p className="mt-2 text-muted-foreground">
+              Technologies I use to build modern web applications.
+            </p>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2">
+
+            <Card>
+              <CardContent className="space-y-5 p-6">
+                <h4 className="font-bold text-lg">
+                  Frontend
+                </h4>
+
+                <div className="flex flex-wrap gap-2">
+                  {frontend.map((item) => (
+                    <Badge key={item}>
+                      {item}
+                    </Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="space-y-5 p-6">
+                <h4 className="font-bold text-lg">
+                  Backend
+                </h4>
+
+                <div className="flex flex-wrap gap-2">
+                  {backend.map((item) => (
+                    <Badge key={item}>
+                      {item}
+                    </Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="space-y-5 p-6">
+                <h4 className="font-bold text-lg">
+                  Databases
+                </h4>
+
+                <div className="flex flex-wrap gap-2">
+                  {database.map((item) => (
+                    <Badge key={item}>
+                      {item}
+                    </Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="space-y-5 p-6">
+                <h4 className="font-bold text-lg">
+                  Tools
+                </h4>
+
+                <div className="flex flex-wrap gap-2">
+                  {tools.map((item) => (
+                    <Badge key={item}>
+                      {item}
+                    </Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+          </div>
+
+        </div>
+
+        <Separator className="my-16" />
+
+        {/* Philosophy */}
+
+        <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-background">
+          <CardContent className="space-y-5 p-8">
+
+            <h3 className="text-3xl font-bold">
+              My Philosophy
+            </h3>
+
+            <p className="leading-8 text-muted-foreground">
+              I believe great software is more than just functional—it should
+              be intuitive, performant, secure, and enjoyable to use. Every
+              project is an opportunity to solve real-world problems through
+              thoughtful engineering, clean architecture, maintainable code,
+              and attention to detail.
+            </p>
+
+          </CardContent>
+        </Card>
+
+        <Separator className="my-16" />
+
+        {/* CTA */}
+
+        <Card className="border-0 bg-primary text-primary-foreground shadow-xl">
+          <CardContent className="flex flex-col items-center gap-6 p-12 text-center">
+
+            <BriefcaseBusiness className="h-12 w-12" />
+
+            <h3 className="text-4xl font-bold">
+              Let's Build Something Amazing Together
+            </h3>
+
+            <p className="max-w-3xl text-lg opacity-90">
+              I'm always excited to work on challenging projects, collaborate
+              with passionate teams, and create digital products that make a
+              meaningful impact.
+            </p>
+
+            <div className="flex flex-wrap justify-center gap-3">
+
+              <Badge
+                variant="secondary"
+                className="px-4 py-2"
+              >
+                Full-Time
+              </Badge>
+
+              <Badge
+                variant="secondary"
+                className="px-4 py-2"
+              >
+                Freelance
+              </Badge>
+
+              <Badge
+                variant="secondary"
+                className="px-4 py-2"
+              >
+                Remote
+              </Badge>
+
+              <Badge
+                variant="secondary"
+                className="px-4 py-2"
+              >
+                Open Source
+              </Badge>
+
+            </div>
+
+            <Button
+              size="lg"
+              variant="secondary"
+            >
+              Let's Talk
+            </Button>
+
+          </CardContent>
+        </Card>
+
       </div>
     </section>
-  )
+  );
 }

@@ -1,13 +1,44 @@
 'use client'
 
-import { Menu, X, Moon, Sun, Search } from 'lucide-react'
+import { Menu, X, Moon, Sun, Search, Users, Camera, Info, Book, BookAIcon, Briefcase } from 'lucide-react'
+import Link from 'next/link'
 import { useState, useEffect } from 'react'
 
 export default function Header() {
   const [darkMode, setDarkMode] = useState(false)
   const [mounted, setMounted] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
-  const navItems = ['Components', 'Blocks', 'Blog', 'Sponsors']
+  const navItems = [
+    {
+      icon: Info,
+      title: "About",
+      description:
+        "Comprehensive student information system for managing enrollments, profiles, and academic records with ease",
+      href: "/about",
+    },
+    {
+      icon: Briefcase,
+      title: "Experience",
+      description:
+        "Comprehensive student information system for managing enrollments, profiles, and academic records with ease",
+      href: "/experience",
+    },
+    {
+      icon: BookAIcon,
+      title: "Projects",
+      description:
+        "Comprehensive student information system for managing enrollments, profiles, and academic records with ease",
+      href: "/projects",
+    },
+    {
+      icon: Book,
+      title: "Blog",
+      description:
+        "Comprehensive student information system for managing enrollments, profiles, and academic records with ease",
+      href: "/blog",
+    },
+
+  ]
 
   useEffect(() => {
     setMounted(true)
@@ -32,28 +63,32 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-sm">CD</span>
+        <Link href="/">
+          <div className="flex items-center space-x-2">
+            {/* <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+              <span className="text-primary-foreground font-bold text-sm">MAR</span>
+            </div> */}
+            <span className="font-semibold text-lg hidden sm:inline">MD ASIF RAZA</span>
           </div>
-          <span className="font-semibold text-lg hidden sm:inline">Chánh Đại</span>
-        </div>
-
+        </Link>
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          {navItems.map((item) => (
-            <a
-              key={item}
-              href="#"
-              className="text-sm text-foreground/70 hover:text-foreground transition-colors"
+          {navItems.map((item, index) => (
+            <Link
+              key={index}
+              href={item.href}
+              className="flex items-center gap-3 text-sm text-foreground/70 transition-colors hover:text-foreground"
             >
-              {item}
-            </a>
+              <div className="flex items-center gap-3">
+                <item.icon className="h-6 w-6 text-black" />
+                <h3 className="text-2xl">{item.title}</h3>
+              </div>
+            </Link>
           ))}
         </div>
 
         {/* Right Actions */}
-        <div className="flex items-center space-x-4">
+        {/* <div className="flex items-center space-x-4">
           <button className="hidden sm:inline-flex items-center space-x-2 px-3 py-2 text-sm text-foreground/60 hover:text-foreground border border-border rounded-lg transition-colors">
             <Search size={16} />
             <span>Search</span>
@@ -78,20 +113,20 @@ export default function Header() {
           >
             {menuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
-        </div>
+        </div> */}
       </nav>
 
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden border-t border-border bg-background">
           <div className="px-4 py-4 space-y-3">
-            {navItems.map((item) => (
+            {navItems.map((item, index) => (
               <a
-                key={item}
-                href="#"
+                key={index}
+                href={`/${item.href}`}
                 className="block text-sm text-foreground/70 hover:text-foreground transition-colors py-2"
               >
-                {item}
+                {item.title}
               </a>
             ))}
           </div>
