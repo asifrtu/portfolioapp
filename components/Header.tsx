@@ -1,0 +1,81 @@
+import { Menu, X, Moon, Sun, Search } from 'lucide-react'
+
+interface HeaderProps {
+  darkMode: boolean
+  toggleDarkMode: () => void
+  menuOpen: boolean
+  setMenuOpen: (open: boolean) => void
+}
+
+export default function Header({ darkMode, toggleDarkMode, menuOpen, setMenuOpen }: HeaderProps) {
+  const navItems = ['Components', 'Blocks', 'Blog', 'Sponsors']
+
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+        {/* Logo */}
+        <div className="flex items-center space-x-2">
+          <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+            <span className="text-primary-foreground font-bold text-sm">CD</span>
+          </div>
+          <span className="font-semibold text-lg hidden sm:inline">Chánh Đại</span>
+        </div>
+
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center space-x-8">
+          {navItems.map((item) => (
+            <a
+              key={item}
+              href="#"
+              className="text-sm text-foreground/70 hover:text-foreground transition-colors"
+            >
+              {item}
+            </a>
+          ))}
+        </div>
+
+        {/* Right Actions */}
+        <div className="flex items-center space-x-4">
+          <button className="hidden sm:inline-flex items-center space-x-2 px-3 py-2 text-sm text-foreground/60 hover:text-foreground border border-border rounded-lg transition-colors">
+            <Search size={16} />
+            <span>Search</span>
+            <span className="text-xs text-foreground/40 ml-2">⌘K</span>
+          </button>
+
+          <button
+            onClick={toggleDarkMode}
+            className="p-2 rounded-lg hover:bg-muted transition-colors"
+            aria-label="Toggle theme"
+          >
+            {darkMode ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
+
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors"
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
+      </nav>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="md:hidden border-t border-border bg-background">
+          <div className="px-4 py-4 space-y-3">
+            {navItems.map((item) => (
+              <a
+                key={item}
+                href="#"
+                className="block text-sm text-foreground/70 hover:text-foreground transition-colors py-2"
+              >
+                {item}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+    </header>
+  )
+}
