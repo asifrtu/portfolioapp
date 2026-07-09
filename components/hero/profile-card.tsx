@@ -67,7 +67,7 @@ export default function ProfileCard() {
 
         <div className="flex gap-2">
           <Globe size={16} />
-          asifraza.dev
+          asifraza.live
         </div>
 
       </div>
