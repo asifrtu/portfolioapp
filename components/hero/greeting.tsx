@@ -10,13 +10,13 @@ export default function Greeting() {
       const hour = new Date().getHours();
 
       if (hour < 12) {
-        setGreeting("Good morning ☀️");
+        setGreeting("Good morning");
       } else if (hour < 17) {
-        setGreeting("Good afternoon 👋");
+        setGreeting("Good afternoon");
       } else if (hour < 21) {
-        setGreeting("Good evening 🌙");
+        setGreeting("Good evening");
       } else {
-        setGreeting("Good night 🌌");
+        setGreeting("Good night");
       }
     };
 
