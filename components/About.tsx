@@ -102,20 +102,20 @@ export default function About() {
 
           <h1 className="text-4xl font-extrabold tracking-tight md:text-6xl">
             Hi, I'm{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent">
               ASIF RAZA
             </span>
           </h1>
 
           <h2 className="text-2xl font-semibold text-muted-foreground">
-            Full-Stack Software Engineer
+            Senior Full Stack Developer
           </h2>
 
           <p className="mx-auto max-w-3xl text-lg leading-8 text-muted-foreground">
             Building scalable, high-performance web applications with modern
             technologies and exceptional user experiences.
           </p>
-
+{/* 
           <div className="flex flex-wrap justify-center gap-4 pt-3">
             <Button size="lg">
               Hire Me
@@ -131,7 +131,7 @@ export default function About() {
                 User
               </Link>
             </Button>
-          </div>
+          </div> */}
         </div>
 
         <Separator className="my-16" />
@@ -149,11 +149,11 @@ export default function About() {
             </div>
 
             <p className="leading-8 text-muted-foreground">
-              With over <strong>5 years of experience</strong>, I specialize in
+              With over <strong>7 years of experience</strong>, I specialize in
               developing scalable frontend and backend applications using
               <strong>
                 {" "}
-                React, Next.js, Node.js, Express.js, Laravel, TypeScript,
+                React, Next.js, Node.js, Express.js, TypeScript,
                 PostgreSQL, MySQL, and MongoDB.
               </strong>{" "}
               I enjoy transforming complex business requirements into elegant,

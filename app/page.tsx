@@ -2,18 +2,15 @@
 
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
-import About from '@/components/About'
-import Components from '@/components/Components'
-import Experience from '@/components/Experience'
-import Blog from '@/components/Blog'
-import Footer from '@/components/Footer'
+import HeroSection from '@/components/hero/hero'
+import PostCard from '@/components/post-card'
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
       <main className="pt-16">
-        <Hero />
+        <HeroSection />
       </main>
     </div>
   )

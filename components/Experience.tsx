@@ -1,33 +1,41 @@
 export default function Experience() {
   const experiences = [
     {
-      title: 'Senior Design Engineer',
-      company: 'Vercel',
-      period: '2023 — Present',
+      title: 'Senior Full Stack Developer',
+      company: 'BECKONS SOFTWARE',
+      period: '2025 — Present',
       description:
         'Building and maintaining critical components for Vercel&apos;s platform. Leading design system initiatives and collaborating with cross-functional teams on component architecture and accessibility.',
       highlights: ['Design Systems', 'Component Architecture', 'Accessibility'],
     },
     {
-      title: 'Design Engineer',
-      company: 'Stripe',
-      period: '2021 — 2023',
+      title: 'Full Stack Developer',
+      company: 'BECKONS SOFTWARE',
+      period: '2022 — Present',
       description:
         'Developed high-quality UI components and design system documentation. Focused on creating accessible, performant interfaces for payment integration.',
       highlights: ['React', 'TypeScript', 'CSS'],
     },
     {
-      title: 'Frontend Developer',
-      company: 'Digital Agency',
-      period: '2019 — 2021',
+      title: 'Full Stack Developer',
+      company: 'BECKONS SOFTWARE',
+      period: '2022 — Present',
       description:
         'Created responsive web applications and component libraries. Worked closely with designers to implement pixel-perfect interfaces.',
       highlights: ['Next.js', 'Tailwind CSS', 'Web Design'],
     },
     {
       title: 'Web Developer',
-      company: 'Startup',
-      period: '2017 — 2019',
+      company: 'Qdexi Technology',
+      period: 'Nov 2020 - Jan 2022',
+      description:
+        'Built full-stack web applications with modern JavaScript frameworks. Contributed to both frontend and backend development.',
+      highlights: ['JavaScript', 'React', 'Full-stack'],
+    },
+    {
+      title: 'PHP Developer',
+      company: 'Ultime Tech Pvt Ltd',
+      period: 'May 2019 - Aug 2020',
       description:
         'Built full-stack web applications with modern JavaScript frameworks. Contributed to both frontend and backend development.',
       highlights: ['JavaScript', 'React', 'Full-stack'],

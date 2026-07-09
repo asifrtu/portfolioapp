@@ -30,7 +30,7 @@ export default function Footer() {
               <span className="font-semibold">MD ASIF RAZA</span>
             </div>
             <p className="text-sm text-foreground/60">
-              Full-Stack Software Engineer.
+              Senior Full Stack Developer
             </p>
           </div>
 

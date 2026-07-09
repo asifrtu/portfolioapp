@@ -44,7 +44,7 @@ export default function Hero() {
   return (
     <>
       {/* Full-Screen Cover Page */}
-      <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-background via-background to-background/95">
+      <section className="relative min-h-screen overflow-hidden bg-linear-to-br from-background via-background to-background/95">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
@@ -53,7 +53,7 @@ export default function Hero() {
         </div>
 
         {/* Grid Background */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:50px_50px] dark:bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-size-[50px_50px] dark:bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)]"></div>
 
         {/* Content */}
         <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 pt-20">
@@ -68,14 +68,14 @@ export default function Hero() {
             <div className="space-y-4">
               <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tighter leading-tight">
                 <span className="bg-clip-text text-transparent bg-linear-to-r from-foreground via-foreground to-foreground/70">
-                  Sr Full Stack Software Developer
+                  Senior Full Stack Developer
                 </span>
               </h1>
               
               <div className="h-1 w-16 bg-gradient-to-r from-primary to-primary/50 mx-auto"></div>
 
               <h2 className="text-xl sm:text-2xl lg:text-3xl text-foreground/80 font-light">
-                | ReactJS | NodeJS | Mern Stack | AWS | Lambda | S3 | Cloudflare | Learning AI/ML | MongoDB | Microservices | SQL | Docker
+                | ReactJS | NodeJS | 7+ Years | Mern Stack | AWS | Lambda | S3 | Cloudflare | Learning AI/ML | MongoDB | Microservices | SQL | Docker
               </h2>
             </div>
 

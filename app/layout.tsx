@@ -6,19 +6,19 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Chánh Đại – Design Engineer",
+  title: "Asif Raza – Software Developer",
   description:
-    "Design engineer passionate about crafting beautiful, accessible digital experiences.",
+    "| ReactJS | NodeJS | Mern Stack | AWS | Lambda | S3 | Cloudflare | Learning AI/ML | MongoDB | Microservices | SQL | Docker",
   generator: "v0.app",
   icons: {
     icon: [
       {
-        url: "/icon-light-32x32.png",
+        url: "/apple-icon.png",
         media: "(prefers-color-scheme: light)",
       },
       {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
+        url: "/apple-icon.png",
+        media: "(prefers-color-schem*e: dark)",
       },
       {
         url: "/icon.svg",
